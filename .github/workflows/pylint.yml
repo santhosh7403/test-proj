@@ -30,6 +30,6 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
-      - run: cp -f ./my_test.py ./build/my_test.py
       - run: echo `pwd`
       - run: echo `ls -l`
+      - run: cp -f ./my_test.py ./build/my_test.py
