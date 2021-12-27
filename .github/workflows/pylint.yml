@@ -27,9 +27,16 @@ jobs:
     steps:
       - run: echo "Deploying to production server on branch $GITHUB_REF"
   build-cp:
+    name: Build
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
-      - run: echo `pwd`
-      - run: echo `ls -l`
-      - run: cp -f `pwd`/my_test.py `pwd`/build/
+      - uses: actions/checkout@master
+      - name: copy file
+        uses: canastro/copy-file-action@master
+        with:
+          source: "./my_test.py"
+          target: "./build/my_test.py"
+      
+      
+      
