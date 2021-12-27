@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - name: copy file
-        uses: canastro/copy-file-action@master
+        uses: canastro/copy-action@0.0.2  #canastro/copy-file-action@master
         with:
           source: "my_test.py"
           target: "build/my_test.py"
