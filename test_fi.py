@@ -2,5 +2,5 @@
     module doc string
 
 """
-print("hello")
+print("hello test")
 print("Its new")
