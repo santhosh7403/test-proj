@@ -30,4 +30,4 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
-      - run: cp -f my_test.py ./build/my_test.py
+      - run: cp -f ./my_test.py ./build/my_test.py
