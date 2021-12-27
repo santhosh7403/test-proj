@@ -32,4 +32,4 @@ jobs:
     steps:
       - run: echo `pwd`
       - run: echo `ls -l`
-      - run: cp -f /my_test.py /build/
+      - run: cp -f `pwd`/my_test.py `pwd`/build/
