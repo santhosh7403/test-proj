@@ -35,8 +35,8 @@ jobs:
       - name: copy file
         uses: canastro/copy-file-action@master
         with:
-          source: "./my_test.py"
-          target: "./build/my_test.py"
+          source: "/my_test.py"
+          target: "/build/my_test.py"
       
       
       
