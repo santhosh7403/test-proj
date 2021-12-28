@@ -38,7 +38,12 @@ jobs:
         source: "my_test.py"
         target: "build/my_test.py"
     - name: Commit copy
+      env:
+        USER: ${{github.repository_owner}}
+        TOKEN: ${{github.token}}
+        REPO: ${{github.repository}}
       run: |
         git commit -m 'build copy commit'
-        git push origin main    
+        git config --global user.name=$USER
+        git push -u origin main https://oauth2:$GITHUB_TOKEN@github.com/$REPO.git   
       
