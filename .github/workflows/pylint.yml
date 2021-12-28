@@ -31,7 +31,7 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v2
       - name: copy file
         uses: canastro/copy-action@0.0.2  #canastro/copy-file-action@master
         with:
