@@ -33,10 +33,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: copy file
-      uses: canastro/copy-action@0.0.2  #canastro/copy-file-action@master
-      with:
-        source: "my_test.py"
-        target: "build/my_test.py"
+      # uses: canastro/copy-action@0.0.2  #canastro/copy-file-action@master
+      # with:
+        # source: "my_test.py"
+        # target: "build/my_test.py"
+      run: cp -f "my_test.py" "build/my_test.py"
     - name: Commit copy
       env:
         USER: ${{github.repository_owner}}
