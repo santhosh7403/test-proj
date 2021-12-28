@@ -46,5 +46,5 @@ jobs:
         git config --global user.name $USER
         git config --global user.email 'skumar7403@gmail.com'
         git commit -am 'build copy commit'
-        git push -u origin main https://oauth2:$GITHUB_TOKEN@github.com/$REPO.git   
+        git push https://$USER:$GITHUB_TOKEN@github.com/$REPO.git HEAD:main --force --follow-tags --tags  
       
